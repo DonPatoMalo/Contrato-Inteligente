@@ -11,6 +11,13 @@ export default {
         'Blanco': '#ffffff',
         'Rojo': '#B2130D'
       },
+      backgroundColor: theme => ({
+        ...theme('colors'), 
+        'Negro': '#000000',
+        'Blanco': '#ffffff',
+        'Rojo': '#B2130D'
+      }),
+
       fontFamily: {
         Montserrat: ['Montserrat', 'sans-serif'],
       }
