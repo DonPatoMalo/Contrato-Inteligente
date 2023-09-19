@@ -18,6 +18,12 @@ export default {
         'Rojo': '#B2130D'
       }),
 
+      borderColor: {
+        'Negro': '#000000',
+        'Blanco': '#ffffff',
+        'Rojo': '#B2130D'
+      },
+
       fontFamily: {
         Montserrat: ['Montserrat', 'sans-serif'],
       }
