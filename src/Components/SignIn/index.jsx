@@ -6,8 +6,8 @@ function SignIn() {
     return (
         <main className="max-w-screen-xl bg-Blanco font-Montserrat mx-auto p-5 min-h-screen tracking-wider flex justify-center items-center mt-[-5rem]">
             <section className="w-1/2 flex flex-col justify-center items-center relative top-5">
-                <div className="w-full flex justify-center items-center">
-                    <img src={ContratoImagen} alt="Logo de contrato inteligente" className="w-2/4" />
+                <div className="w-full flex justify-center items-center relative top-6">
+                    <img src={ContratoImagen} alt="Logo de contrato inteligente" className="w-1/3" />
                 </div>
 
                 <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
@@ -30,7 +30,7 @@ function SignIn() {
                                         type="text"
                                         autoComplete="text"
                                         required
-                                        className="block w-full rounded-md border-0 p-2 text-gray-900 shadow- ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                                        className="block w-full rounded-md border-0 p-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:border-red-500 sm:text-sm sm:leading-6"
                                     />
                                 </div>
                             </div>
@@ -53,7 +53,7 @@ function SignIn() {
                                         type="password"
                                         autoComplete="current-password"
                                         required
-                                        className="block w-full rounded-md border-0 p-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                                        className="block w-full rounded-md border-0 p-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:border-red-500 sm:text-sm sm:leading-6"
                                     />
                                 </div>
                             </div>
@@ -61,7 +61,7 @@ function SignIn() {
                             <div>
                                 <button
                                     type="submit"
-                                    className="flex w-full justify-center rounded-md bg-Rojo p-2 text-md font-semibold leading-6 text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                                    className="flex w-full justify-center rounded-md bg-Rojo p-2 text-md font-semibold leading-6 text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
                                 >
                                     Iniciar sesión
                                 </button>

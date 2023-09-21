@@ -11,9 +11,9 @@ function Inicio() {
                     <img src={ContratoLogo} alt="Logo de imagen" className="ml-[-6rem]" />
                     <p className="text-xl mt-3">Crea contratos, firma de manera segura y guarda en <span className="text-Rojo font-semibold">Blockchain</span> con un solo clic.</p>
                     <ul className="w-full flex gap-10 text-Negro mx-8 mt-10">
-                        <li className="px-8 py-2 border border-Rojo rounded-xl cursor-pointer">Seguro</li>
-                        <li className="px-8 py-2 border border-Rojo rounded-xl cursor-pointer">Confiable</li>
-                        <li className="px-8 py-2 border border-Rojo rounded-xl cursor-pointer">Incleíble</li>
+                        <li className="px-8 py-2 border border-Rojo rounded-xl cursor-pointer transition duration-300 hover:bg-Rojo hover:text-Blanco">Seguro</li>
+                        <li className="px-8 py-2 border border-Rojo rounded-xl cursor-pointer transition duration-300 hover:bg-Rojo hover:text-Blanco">Confiable</li>
+                        <li className="px-8 py-2 border border-Rojo rounded-xl cursor-pointer transition duration-300 hover:bg-Rojo hover:text-Blanco">Incleíble</li>
                     </ul>
                 </section>
                 <section className="flex justify-center items-center">
