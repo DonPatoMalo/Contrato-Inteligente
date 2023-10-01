@@ -2,24 +2,29 @@ import { NavLink, Link } from "react-router-dom"
 import React from "react"
 import Logo from "../../assets/img/logo.png"
 
-function Navbar() {
-    const rutas = [];
+function Navbar(props) {
+
+    const inicio = props.inicio
+    const servicios = props.servicios
+    const nosotros = props.nosotros
+
+    const rutas = []
 
     rutas.push({
         to: '/',
-        text: 'Inicio'
-    });
+        text: inicio
+    })
     rutas.push({
         to: '/contratos',
-        text: 'Contratos'
-    });
+        text: servicios
+    })
     rutas.push({
         to: '/nosotros',
-        text: 'Nosotros'
-    });
+        text: nosotros
+    })
 
     return (
-        <header className="w-full h-20 bg-Blanco shadow-lg font-Montserrat relative tracking-wider">
+        <header className="fixed top-0 left-0 right-0 w-full h-20 bg-Blanco shadow-lg font-Montserrat z-2 tracking-wider">
             <nav className="max-w-screen-xl mx-auto flex justify-between items-center w-full h-full">
                 <Link to="/">
                     <img src={Logo} alt="Blockchain Logo" className="w-14 m-10" />

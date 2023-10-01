@@ -4,7 +4,7 @@ import Ilustracion from "../../assets/img/signIn.png"
 
 function SignIn() {
     return (
-        <main className="max-w-screen-xl bg-Blanco font-Montserrat mx-auto p-5 min-h-screen tracking-wider flex justify-center items-center mt-[-5rem]">
+        <main className="max-w-screen-xl font-Montserrat mx-auto p-5 min-h-screen tracking-wider flex justify-center items-center">
             <section className="w-1/2 flex flex-col justify-center items-center relative top-5">
                 <div className="w-full flex justify-center items-center relative top-6">
                     <img src={ContratoImagen} alt="Logo de contrato inteligente" className="w-1/3" />
@@ -20,7 +20,7 @@ function SignIn() {
                     <div className="mt-16 sm:mx-auto sm:w-full sm:max-w-sm">
                         <form className="space-y-6" action="#" method="POST">
                             <div>
-                                <label htmlFor="text" className="block text-md font-medium leading-6 text-gray-900">
+                                <label htmlFor="text" className="block text-xl font-medium leading-6 text-gray-900">
                                     Número de identificación (RUT)
                                 </label>
                                 <div className="mt-2">
@@ -37,7 +37,7 @@ function SignIn() {
 
                             <div>
                                 <div className="flex items-center justify-between">
-                                    <label htmlFor="password" className="block text-md font-medium leading-6 text-gray-900">
+                                    <label htmlFor="password" className="block text-xl font-medium leading-6 text-gray-900">
                                         Clave Única
                                     </label>
                                     <div className="text-sm">
@@ -61,24 +61,25 @@ function SignIn() {
                             <div>
                                 <button
                                     type="submit"
-                                    className="flex w-full justify-center rounded-md bg-Rojo p-2 text-md font-semibold leading-6 text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+                                    className="flex w-full h-12 justify-center items-center rounded-md bg-Rojo p-2 text-xl font-semibold leading-6 text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
                                 >
                                     Iniciar sesión
                                 </button>
                             </div>
                         </form>
 
-                        <p className="mt-10 text-center text-sm text-gray-500">
+                        <p className="mt-10 text-center text-md text-gray-500">
                             No tienes clave única ?{' '}
-                            <a href="https://claveunica.gob.cl" className="font-semibold leading-6 text-Rojo hover:text-red-500">
+                           
+                        </p>
+                        <a href="https://claveunica.gob.cl" className="flex justify-center mt-5 font-semibold leading-6 text-Rojo hover:text-red-500">
                                 Contacta y crea una.
                             </a>
-                        </p>
                     </div>
                 </div>
             </section>
             <section className="w-1/2 h-auto flex justify-center items-center">
-                <img src={Ilustracion} alt="Ilustración Inicio de sesión" />
+                <img className="custom-shadow" src={Ilustracion} alt="Ilustración Inicio de sesión" />
             </section>
         </main>
     )

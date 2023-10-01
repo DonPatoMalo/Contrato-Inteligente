@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.bg-prisma {
+      background-image: url('../../assets/svg/prisma.svg');
+      background-size: cover;
+      background-attachment: fixed;
+}
+
+.custom-shadow {
+      filter: drop-shadow(0 0 20px #B2130D);
+}

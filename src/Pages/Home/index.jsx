@@ -1,12 +1,14 @@
 import { useContext } from "react";
 import Navbar from "../../Components/Navbar"
 import Inicio from "../../Components/Inicio"
+import Valores from "../../Components/Valores"
 
 function Home() {
     return (
         <>
-            <Navbar />
+            <Navbar inicio={"Inicio"} servicios={"Servicios"} nosotros={"Nosotros"}/>
             <Inicio />
+            <Valores />
         </>
     )
 }
