@@ -6,7 +6,7 @@ import Valores from "../../Components/Valores"
 function Home() {
     return (
         <>
-            <Navbar inicio={"Inicio"} servicios={"Servicios"} nosotros={"Nosotros"}/>
+            <Navbar inicio={"Inicio"} servicios={"Servicios"} nosotros={"Nosotros"} button={"Iniciar Sesión"}/>
             <Inicio />
             <Valores />
         </>

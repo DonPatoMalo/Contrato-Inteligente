@@ -5,7 +5,7 @@ import Ilustracion from "../../assets/img/signIn.png"
 function SignIn() {
     return (
         <main className="max-w-screen-xl font-Montserrat mx-auto p-5 min-h-screen tracking-wider flex justify-center items-center">
-            <section className="w-1/2 flex flex-col justify-center items-center relative top-5">
+            <section className="max-w-1/2 flex flex-col justify-center items-center relative bg-white rounded-3xl shadow-2xl mt-20">
                 <div className="w-full flex justify-center items-center relative top-6">
                     <img src={ContratoImagen} alt="Logo de contrato inteligente" className="w-1/3" />
                 </div>
@@ -68,17 +68,17 @@ function SignIn() {
                             </div>
                         </form>
 
-                        <p className="mt-10 text-center text-md text-gray-500">
+                        <p className="mt-5 text-center text-md text-gray-500">
                             No tienes clave única ?{' '}
-                           
+
                         </p>
-                        <a href="https://claveunica.gob.cl" className="flex justify-center mt-5 font-semibold leading-6 text-Rojo hover:text-red-500">
-                                Contacta y crea una.
-                            </a>
+                        <a href="https://claveunica.gob.cl" className="flex justify-center mt-1 font-semibold leading-6 text-Rojo hover:text-red-500">
+                            Contacta y crea una.
+                        </a>
                     </div>
                 </div>
             </section>
-            <section className="w-1/2 h-auto flex justify-center items-center">
+            <section className="w-1/2 h-auto flex justify-center items-center relative left-10" id="image">
                 <img className="custom-shadow" src={Ilustracion} alt="Ilustración Inicio de sesión" />
             </section>
         </main>

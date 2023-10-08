@@ -7,6 +7,7 @@ function Navbar(props) {
     const inicio = props.inicio
     const servicios = props.servicios
     const nosotros = props.nosotros
+    const button = props.button
 
     const rutas = []
 
@@ -43,8 +44,8 @@ function Navbar(props) {
                         </li>
                     ))}
                 </ul>
-
-                <button className="h-10 bg-Rojo text-Blanco px-6 py-2 mx-6 rounded-full transition duration-300 hover:bg-red-500"> <NavLink to="/login"> Iniciar Sesión </NavLink> </button>
+                
+                <button className="h-10 bg-Rojo text-Blanco px-6 py-2 mx-6 rounded-full transition duration-300 hover:bg-red-500"> <NavLink to="/login"> {button} </NavLink> </button>
             </nav>
         </header>
     )

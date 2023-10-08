@@ -6,7 +6,7 @@ import SignIn from "../../Components/SignIn"
 function Login() {
     return (
         <>
-            <Navbar />
+            <Navbar button={"Chile 🇨🇱"}/>
             <SignIn />
         </>
     )
