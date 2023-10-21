@@ -12,3 +12,10 @@
 .custom-shadow {
       filter: drop-shadow(0 0 20px #313131);
 }
+
+.text-gradient {
+      background: linear-gradient(45deg, #960000, #ED3A4F);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+}

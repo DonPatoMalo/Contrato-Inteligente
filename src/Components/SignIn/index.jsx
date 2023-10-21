@@ -1,8 +1,41 @@
-import React from "react"
+import React, { useState } from "react"
 import ContratoImagen from "../../assets/img/logoContrato.png"
 import Ilustracion from "../../assets/img/signIn.png"
+import Contrato from "../../Pages/Contrato"
 
 function SignIn() {
+    const [rut, setRut] = useState("")
+    const [claveUnica, setClaveUnica] = useState("")
+
+    const enviarAutenticacion = async () => {
+        try {
+            const response = await fetch("https://contratoback-desarrollo.up.railway.app/api/auth/login", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    username: rut,
+                    password: claveUnica,
+                }),
+            });
+
+            if (response.ok) {
+                <Contrato/>
+                const data = await response.json();
+                manejarRespuesta(data);
+            } else {
+                console.error("Error al autenticar");
+            }
+        } catch (error) {
+            console.error("Error de red:", error);
+        }
+    }
+
+    const manejarRespuesta = (data) => {
+        console.log(data)
+    }
+
     return (
         <main className="max-w-screen-xl font-Montserrat mx-auto p-5 min-h-screen tracking-wider flex justify-center items-center">
             <section className="max-w-1/2 flex flex-col justify-center items-center relative bg-white rounded-3xl shadow-2xl mt-20">
@@ -18,7 +51,7 @@ function SignIn() {
                     </div>
 
                     <div className="mt-16 sm:mx-auto sm:w-full sm:max-w-sm">
-                        <form className="space-y-6" action="#" method="POST">
+                        <form className="space-y-6" onSubmit={enviarAutenticacion}>
                             <div>
                                 <label htmlFor="text" className="block text-xl font-medium leading-6 text-gray-900">
                                     Número de identificación (RUT)
@@ -30,6 +63,8 @@ function SignIn() {
                                         type="text"
                                         autoComplete="text"
                                         required
+                                        value={rut}
+                                        onChange={(e) => setRut(e.target.value)}
                                         className="block w-full rounded-md border-0 p-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:border-red-500 sm:text-sm sm:leading-6"
                                     />
                                 </div>
@@ -53,6 +88,8 @@ function SignIn() {
                                         type="password"
                                         autoComplete="current-password"
                                         required
+                                        value={claveUnica}
+                                        onChange={(e) => setClaveUnica(e.target.value)}
                                         className="block w-full rounded-md border-0 p-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:border-red-500 sm:text-sm sm:leading-6"
                                     />
                                 </div>
