@@ -1,39 +1,16 @@
 import React, { useState } from "react"
 import ContratoImagen from "../../assets/img/logoContrato.png"
 import Ilustracion from "../../assets/img/signIn.png"
-import Contrato from "../../Pages/Contrato"
+import { enviarAutenticacion } from "../../Utils/Autenticacion"
 
 function SignIn() {
     const [rut, setRut] = useState("")
     const [claveUnica, setClaveUnica] = useState("")
+    const [validacionUsuario, setValidacionUsuario] = useState(false)
 
-    const enviarAutenticacion = async () => {
-        try {
-            const response = await fetch("https://contratoback-desarrollo.up.railway.app/api/auth/login", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify({
-                    username: rut,
-                    password: claveUnica,
-                }),
-            });
-
-            if (response.ok) {
-                <Contrato/>
-                const data = await response.json();
-                manejarRespuesta(data);
-            } else {
-                console.error("Error al autenticar");
-            }
-        } catch (error) {
-            console.error("Error de red:", error);
-        }
-    }
-
-    const manejarRespuesta = (data) => {
-        console.log(data)
+    const login = async () => {
+        const resultado = await enviarAutenticacion(rut, claveUnica)
+        setValidacionUsuario(resultado)
     }
 
     return (
@@ -51,7 +28,10 @@ function SignIn() {
                     </div>
 
                     <div className="mt-16 sm:mx-auto sm:w-full sm:max-w-sm">
-                        <form className="space-y-6" onSubmit={enviarAutenticacion}>
+                        <form className="space-y-6" onSubmit={(e) => {
+                            e.preventDefault()
+                            login()
+                        }}>
                             <div>
                                 <label htmlFor="text" className="block text-xl font-medium leading-6 text-gray-900">
                                     Número de identificación (RUT)
