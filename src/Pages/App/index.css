@@ -19,3 +19,7 @@
       background-clip: text;
       color: transparent;
 }
+
+.filtro {
+      filter: drop-shadow(0 0 20px #3d3d3d);
+}

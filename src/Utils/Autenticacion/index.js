@@ -17,6 +17,7 @@ const enviarAutenticacion = async (rut, claveUnica) => {
       const data = await response.json()
       console.log("Autenticación exitosa", data)
       localStorage.setItem("user", JSON.stringify(data))
+
       return true
 
     } else {

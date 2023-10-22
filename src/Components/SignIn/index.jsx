@@ -1,17 +1,32 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import ContratoImagen from "../../assets/img/logoContrato.png"
 import Ilustracion from "../../assets/img/signIn.png"
 import { enviarAutenticacion } from "../../Utils/Autenticacion"
+import { useNavigate } from "react-router-dom"
 
 function SignIn() {
     const [rut, setRut] = useState("")
     const [claveUnica, setClaveUnica] = useState("")
-    const [validacionUsuario, setValidacionUsuario] = useState(false)
+    const [validacionUsuario, setValidacionUsuario] = useState(null)
+    const navigate = useNavigate()
 
     const login = async () => {
-        const resultado = await enviarAutenticacion(rut, claveUnica)
-        setValidacionUsuario(resultado)
+        try {
+            const resultado = await enviarAutenticacion(rut, claveUnica)
+            setValidacionUsuario(resultado)
+            if (resultado) {
+                navigate("/contrato");
+            }
+        } catch (error) {
+            console.error("Error al iniciar sesión:", error)
+            setValidacionUsuario(false)
+        }
     }
+
+    const manejoLogin = async () => {
+        await login()
+    }
+
 
     return (
         <main className="max-w-screen-xl font-Montserrat mx-auto p-5 min-h-screen tracking-wider flex justify-center items-center">
@@ -77,7 +92,8 @@ function SignIn() {
 
                             <div>
                                 <button
-                                    type="submit"
+                                    type="button"
+                                    onClick={manejoLogin}
                                     className="flex w-full h-12 justify-center items-center rounded-md bg-Rojo p-2 text-xl font-semibold leading-6 text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
                                 >
                                     Iniciar sesión
