@@ -15,10 +15,10 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='' element={<Home />} />
-        <Route path='login' element={<Login />} />
-        <Route element={<RutasProtegidas Activar={user} redireccion='login'/>}>
-          <Route path="contrato" element={<Contrato />} />
+        <Route path='https://benjaesteban.github.io/Contrato-Inteligente' element={<Home />} />
+        <Route path='https://benjaesteban.github.io/Contrato-Inteligente/login' element={<Login />} />
+        <Route element={<RutasProtegidas Activar={user} redireccion='https://benjaesteban.github.io/Contrato-Inteligente/login'/>}>
+          <Route path="https://benjaesteban.github.io/Contrato-Inteligente/contrato" element={<Contrato />} />
         </Route>
         <Route path='*' element={<NotFound />} />
       </Routes>
