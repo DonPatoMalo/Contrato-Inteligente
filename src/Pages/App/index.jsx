@@ -20,7 +20,7 @@ function App() {
         <Route element={<RutasProtegidas Activar={user} redireccion='/Contrato-Inteligente/login'/>}>
           <Route path="/Contrato-Inteligente/contrato" element={<Contrato />} />
         </Route>
-        <Route path='*' element={<NotFound />} />
+        <Route path='/Contrato-Inteligente/*' element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   )
