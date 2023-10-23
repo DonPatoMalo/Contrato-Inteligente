@@ -3,9 +3,11 @@ import ContratoLogo from "../../assets/img/logoContrato.png"
 import ImagenInicio from "../../assets/img/Inicio.png"
 
 
-function Inicio() {
+const Inicio = React.forwardRef((props, ref) =>  {
     return (
-        <main className="max-w-screen-xl font-Montserrat mx-auto p-5 min-h-screen tracking-wider flex justify-center items-center">
+        <main
+            ref={ref} 
+            className="max-w-screen-xl font-Montserrat mx-auto p-5 min-h-screen tracking-wider flex justify-center items-center">
             <article className="flex">
                 <section className="w-[50rem] flex flex-col justify-center items-center">
                     <img src={ContratoLogo} alt="Logo de imagen" className="w-full ml-[-2.5rem]" />
@@ -17,11 +19,11 @@ function Inicio() {
                     </ul>
                 </section>
                 <section className="flex justify-center items-center w-2/4 mt-20">
-                    <img src={ImagenInicio} alt="Ilustración de contrato" className="w-full"/>
+                    <img src={ImagenInicio} alt="Ilustración de contrato" className="w-full" />
                 </section>
             </article>
         </main>
     )
-}
+})
 
 export default Inicio
