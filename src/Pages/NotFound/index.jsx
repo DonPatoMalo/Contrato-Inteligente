@@ -16,7 +16,7 @@ function NotFound() {
                     <p
                         className="w-40 h-12 flex justify-center items-center rounded-md bg-Rojo px-3.5 py-2.5 text-md font-semibold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                     >
-                        <Link to="/">Regresar</Link>
+                        <Link to="Contrato-Inteligente/">Regresar</Link>
                     </p>
                     <p className="text-md font-semibold text-gray-900">
                         <Link to="https://claveunica.gob.cl">Contactar a soporte</Link> 

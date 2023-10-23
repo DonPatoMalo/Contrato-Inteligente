@@ -15,7 +15,7 @@ function SignIn() {
             const resultado = await enviarAutenticacion(rut, claveUnica)
             setValidacionUsuario(resultado)
             if (resultado) {
-                navigate("/contrato");
+                navigate("/Contrato-Inteligente/contrato");
             }
         } catch (error) {
             console.error("Error al iniciar sesión:", error)
