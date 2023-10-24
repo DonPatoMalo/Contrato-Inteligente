@@ -38,10 +38,9 @@ function Inicio() {
                                     Iniciar ahora
                                 </a>
                             </NavLink>
-                            <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+                            <a href="#valores" className="text-sm font-semibold leading-6 text-gray-900">
                                 Descubre más <span aria-hidden="true">→</span>
                             </a>
-
                         </div>
                     </div>
                 </div>
