@@ -3,7 +3,7 @@ import Logo from "../../assets/img/logoContrato.png"
 
 function SobreNosotros() {
       return (
-            <section>
+            <section id="sobreNosotros">
                   <article className="font-Montserrat my-20 p-5">
                         <div className="flex flex-col justify-center items-center">
                               <img src={Logo} alt="Logo Contrato Inteligente" className="w-1/3 mb-1 lg:w-1/6" />

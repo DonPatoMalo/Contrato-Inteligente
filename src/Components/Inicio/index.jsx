@@ -5,7 +5,7 @@ import LogoContrato from "../../assets/img/LogoContrato.png"
 
 function Inicio() {
   return (
-    <div className="bg-white font-Montserrat h-screen flex justify-center items-center">
+    <div id="inicio" className="bg-white font-Montserrat h-screen flex justify-center items-center">
       <div className="relative isolate px-6 pt-14 lg:px-8">
         <div
           className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
@@ -20,7 +20,7 @@ function Inicio() {
           />
         </div>
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-          <div className="hidden relative top-5 sm:mb-8 sm:flex sm:justify-center">
+          <div className="relative lg:top-5 sm:mb-8 sm:flex sm:justify-center">
             <img src={LogoContrato} alt="Logo Contrato Inteligente" />
           </div>
           <div className="text-center">

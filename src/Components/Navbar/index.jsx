@@ -1,6 +1,7 @@
 import Logo from "../../assets/img/logo.png"
 import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
+import { NavLink } from "react-router-dom"
 
 const navegacion = [
     { name: 'Inicio', href: '#' },
@@ -16,13 +17,15 @@ function Navbar() {
         <header className="absolute inset-x-0 top-0 z-50">
             <nav className="flex items-center justify-between p-6 lg:px-[300px]" aria-label="Global">
                 <div className="flex lg:flex-1">
-                    <a href="#" className="-m-1.5 p-1.5">
-                        <span className="sr-only">Your Company</span>
+                    <a className="-m-1.5 p-1.5">
+                        <span className="sr-only">Contrato Inteligente</span>
+                        <NavLink to="/Contrato-Inteligente" >
                         <img
-                            className="h-8 w-auto"
+                            className="h-10 w-auto cursor-pointer"
                             src={Logo}
-                            alt=""
+                            alt=""   
                         />
+                        </NavLink>
                     </a>
                 </div>
                 <div className="flex lg:hidden">
@@ -44,10 +47,11 @@ function Navbar() {
                     ))}
                 </div>
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-                    <a href="#" className="text-sm font-semibold leading-6 text-gray-900
-                         hover:bg-Rojo hover:text-white transition ">
+                    <NavLink to="/Contrato-Inteligente/login">
+                    <a className="text-sm font-semibold leading-6 text-gray-900">
                         Iniciar Sesión <span aria-hidden="true">&rarr;</span>
                     </a>
+                    </NavLink>
                 </div>
             </nav>
             <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
@@ -87,12 +91,13 @@ function Navbar() {
                                 ))}
                             </div>
                             <div className="py-6">
+                                <NavLink to="/Contrato-Inteligente/login">
                                 <a
-                                    href="#"
                                     className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                                 >
                                     Iniciar Sesión
                                 </a>
+                                </NavLink>
                             </div>
                         </div>
                     </div>
