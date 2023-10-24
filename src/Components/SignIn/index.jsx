@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import ContratoImagen from "../../assets/img/logoContrato.png"
 import Ilustracion from "../../assets/img/signIn.png"
 import { enviarAutenticacion } from "../../Utils/Autenticacion"
@@ -26,7 +26,6 @@ function SignIn() {
     const manejoLogin = async () => {
         await login()
     }
-
 
     return (
         <main className="max-w-screen-xl font-Montserrat mx-auto p-5 min-h-screen tracking-wider flex justify-center items-center">

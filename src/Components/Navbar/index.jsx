@@ -4,10 +4,10 @@ import { Dialog } from '@headlessui/react'
 import { NavLink } from "react-router-dom"
 
 const navegacion = [
-    { name: 'Inicio', href: '#' },
-    { name: 'Sevicios', href: '#' },
-    { name: 'Nosotros', href: '#' },
-    { name: 'Contactos', href: '#' },
+    { name: 'Inicio', href: '#inicio' },
+    { name: 'Sevicios', href: '#valores' },
+    { name: 'Nosotros', href: '#sobreNosotros' },
+    { name: 'Contactos', href: '#contactos' },
 ]
 
 function Navbar() {

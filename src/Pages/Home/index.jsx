@@ -2,6 +2,8 @@ import Navbar from "../../Components/Navbar"
 import Inicio from "../../Components/Inicio"
 import Valores from "../../Components/Valores"
 import SobreNosotros from "../../Components/SobreNosotros"
+import Contactos from "../../Components/Contactos"
+
 
 function Home() {
     return (
@@ -11,8 +13,8 @@ function Home() {
                 <Inicio />
                 <Valores />
                 <SobreNosotros />
+                <Contactos />
             </main>
-
         </>
     )
 }
