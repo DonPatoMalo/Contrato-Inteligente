@@ -9,13 +9,15 @@ function SobreNosotros() {
                               <img src={Logo} alt="Logo Contrato Inteligente" className="w-1/3 mb-1 lg:w-1/6" />
                               <h2 className="font-bold text-3xl text-gradient lg:text-5xl">Sobre Nosotros</h2>
                         </div>
-                        <div className="my-5 lg:flex lg:max-w-[1200px] lg:my-20 lg:gap-8">
+                        <div className="my-5 lg:flex lg:max-w-[1200px] lg:my-20 lg:gap-[10rem]">
                               <div className="flex flex-col justify-center items-center mt-8">
                                     <h3 className="font-bold text-2xl mb-5 lg:text-3xl">Misión</h3>
-                                    <p className="text-center lg:text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.
-                                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.
-                                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.
-                                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.
+                                    <p className="text-center lg:text-xl">
+                                    Nuestra misión es revolucionar la gestión de contratos de compraventa al 
+                                    brindar a las personas una solución segura y eficiente basada en tecnología 
+                                    Blockchain. Estamos comprometidos en simplificar y acelerar el proceso de 
+                                    creación, firma y seguimiento de contratos, ofreciendo a nuestros clientes 
+                                    la confianza y la autenticidad que merecen en cada acuerdo comercial. 
                                     </p>
                                     <div className="mt-3 lg:mt-8">
                                           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="#ED3A4F" className="w-12 h-12">
@@ -26,10 +28,12 @@ function SobreNosotros() {
                               </div>
                               <div className="flex flex-col justify-center items-center mt-8">
                                     <h3 className="font-bold text-2xl mb-5 lg:text-3xl">Visión</h3>
-                                    <p className="text-center lg:text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.
-                                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.
-                                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.
-                                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.
+                                    <p className="text-center lg:text-xl">
+                                    Nuestra visión es ser líderes globales en la transformación de la gestión de 
+                                    contratos de compraventa a través de la tecnología Blockchain. Queremos 
+                                    ser reconocidos como el estándar de excelencia en la digitalización de contratos, 
+                                    brindando a las empresas una solución que no solo simplifica los procesos, sino que 
+                                    también asegura la integridad de los documentos a largo plazo.
                                     </p>
                                     <div className="mt-3 lg:mt-8">
                                           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="#ED3A4F" className="w-12 h-12">

@@ -16,7 +16,8 @@ function Valores() {
                     <section className="flex flex-col justify-center items-center lg:flex-row">
                         <p className="text-center font-bold text-sm mb-5 lg:text-xl">
                             "Cuando un comprador adquiere un vehículo, el contrato inteligente se encarga de
-                            verificar el pago y transferir automáticamente el título de propiedad al nuevo propietario.""
+                            verificar el pago y transferir automáticamente el título de propiedad al nuevo 
+                            propietario."
                         </p>
                         <div className="flex justify-center">
                             <img src={Image1} alt="Ilustracion Contrato Inteligente" className="max-w-[50%] lg:max-w-[70%]" />
@@ -32,8 +33,9 @@ function Valores() {
                         </div>
                     </section>
                     <section className="flex flex-col justify-center items-center lg:flex-row">
-                        <p className="text-center font-bold text-sm lg:text-xl">"Los contratos inteligentes pueden mantener
-                            un registro detallado del historial de mantenimiento del vehículo y las garantías
+                        <p className="text-center font-bold text-sm lg:text-xl">"La entidad aseguradora en 
+                            Blockchain proporciona contratos inteligentes que pueden mantener un 
+                            registro detallado del historial de todas las compraventa del vehículo y las garantías 
                             asociadas."
                         </p>
                         <div className="flex justify-center">
