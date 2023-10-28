@@ -1,8 +1,11 @@
 import React from "react"
 import LogoContrato from "../../assets/img/logoContrato.png"
+import { useAuth } from "../../Context/auth"
 
 
 function Componentes() {
+      const auth = useAuth()
+
       const atributos = {
             crea: "Crear",
             firmar: "Firmar",

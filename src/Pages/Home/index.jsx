@@ -8,7 +8,7 @@ import Contactos from "../../Components/Contactos"
 function Home() {
     return (
         <>
-            <Navbar inicio={"Inicio"} servicios={"Servicios"} nosotros={"Nosotros"}/>
+            <Navbar />
             <main className="w-full h-full flex flex-col justify-center items-center">
                 <Inicio />
                 <Valores />

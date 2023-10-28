@@ -1,30 +1,16 @@
 import React, { useState } from "react"
 import ContratoImagen from "../../assets/img/logoContrato.png"
 import Ilustracion from "../../assets/img/signIn.png"
-import { enviarAutenticacion } from "../../Utils/Autenticacion"
-import { useNavigate } from "react-router-dom"
+import { useAuth } from "../../Context/auth"
 
 function SignIn() {
-    const [rut, setRut] = useState("")
-    const [claveUnica, setClaveUnica] = useState("")
-    const [validacionUsuario, setValidacionUsuario] = useState(null)
-    const navigate = useNavigate()
+    const auth = useAuth()
 
-    const login = async () => {
-        try {
-            const resultado = await enviarAutenticacion(rut, claveUnica)
-            setValidacionUsuario(resultado)
-            if (resultado) {
-                navigate("/Contrato-Inteligente/contrato")
-            }
-        } catch (error) {
-            console.error("Error al iniciar sesión:", error)
-            setValidacionUsuario(false)
-        }
-    }
+    const [user, setUser] = useState("")
+    const [password, setPassword] = useState("")
 
-    const manejoLogin = async () => {
-        await login()
+    const login = () => {
+        auth.login(user, password)
     }
 
     return (
@@ -70,8 +56,8 @@ function SignIn() {
                                         type="text"
                                         autoComplete="text"
                                         required
-                                        value={rut}
-                                        onChange={(e) => setRut(e.target.value)}
+                                        value={user}
+                                        onChange={(e) => setUser(e.target.value)}
                                         className="block w-full rounded-md border-0 p-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:border-red-500 sm:text-sm sm:leading-6"
                                     />
                                 </div>
@@ -95,8 +81,8 @@ function SignIn() {
                                         type="password"
                                         autoComplete="current-password"
                                         required
-                                        value={claveUnica}
-                                        onChange={(e) => setClaveUnica(e.target.value)}
+                                        value={password}
+                                        onChange={(e) => setPassword(e.target.value)}
                                         className="block w-full rounded-md border-0 p-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:border-red-500 sm:text-sm sm:leading-6"
                                     />
                                 </div>
@@ -105,7 +91,7 @@ function SignIn() {
                             <div>
                                 <button
                                     type="button"
-                                    onClick={manejoLogin}
+                                    onClick={login}
                                     className="flex w-full h-12 justify-center items-center rounded-md bg-Rojo p-2 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 lg:text-xl"
                                 >
                                     Iniciar sesión

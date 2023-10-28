@@ -37,7 +37,6 @@ function Contactos() {
                                     ))
                               }
                         </div>
-
                   </article>
             </footer>
       )

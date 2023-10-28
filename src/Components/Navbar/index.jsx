@@ -13,7 +13,7 @@ const navegacion = [
 function Navbar() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
     const [navbar, setNavbar] = useState(false)
-    
+
     const cambioBackground = () => {
         if (window.scrollY >= 150) {
             setNavbar(true)
@@ -24,21 +24,20 @@ function Navbar() {
 
     window.addEventListener('scroll', cambioBackground)
 
-
     return (
         <header className={navbar ? `fixed inset-x-0 top-0 z-50 bg-[#FFFFFF] shadow-lg transition duration-500` : `fixed inset-x-0 top-0 z-50 transition duration-500`}>
             <nav className="flex items-center justify-between p-6 lg:px-[300px]" aria-label="Global">
                 <div className="flex lg:flex-1">
-                    <a className="-m-1.5 p-1.5">
+                    <div className="-m-1.5 p-1.5">
                         <span className="sr-only">Contrato Inteligente</span>
                         <NavLink to="/Contrato-Inteligente" >
-                        <img
-                            className="h-10 w-auto cursor-pointer"
-                            src={Logo}
-                            alt=""   
-                        />
+                            <img
+                                className="h-10 w-auto cursor-pointer"
+                                src={Logo}
+                                alt='Logo'
+                            />
                         </NavLink>
-                    </a>
+                    </div>
                 </div>
                 <div className="flex lg:hidden">
                     <button
@@ -60,9 +59,9 @@ function Navbar() {
                 </div>
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end">
                     <NavLink to="/Contrato-Inteligente/login">
-                    <a className="text-sm font-semibold leading-6 text-gray-900">
-                        Iniciar Sesión <span aria-hidden="true">&rarr;</span>
-                    </a>
+                        <div className="text-sm font-semibold leading-6 text-gray-900">
+                            Iniciar Sesión <span aria-hidden="true">&rarr;</span>
+                        </div>
                     </NavLink>
                 </div>
             </nav>
@@ -70,14 +69,14 @@ function Navbar() {
                 <div className="fixed inset-0 z-50" />
                 <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
                     <div className="flex items-center justify-between">
-                        <a href="#" className="-m-1.5 p-1.5">
+                        <div className="-m-1.5 p-1.5">
                             <span className="sr-only">Contrato Inteligente</span>
                             <img
                                 className="h-8 w-auto"
                                 src={Logo}
-                                alt=""
+                                alt="Logo"
                             />
-                        </a>
+                        </div>
                         <button
                             type="button"
                             className="-m-2.5 rounded-md p-2.5 text-gray-700"
@@ -93,22 +92,24 @@ function Navbar() {
                         <div className="-my-6 divide-y divide-gray-500/10">
                             <div className="space-y-2 py-6">
                                 {navegacion.map((item) => (
-                                    <a
-                                        key={item.name}
-                                        href={item.href}
-                                        className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                                    >
-                                        {item.name}
+                                    <a key={item.name} href={item.href}>
+                                        <button
+                                            onClick={() => setMobileMenuOpen(false)}
+                                            className="-mx-3 flex w-full rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                                        >
+                                            {item.name}
+                                        </button>
                                     </a>
                                 ))}
                             </div>
+
                             <div className="py-6">
                                 <NavLink to="/Contrato-Inteligente/login">
-                                <a
-                                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                                >
-                                    Iniciar Sesión
-                                </a>
+                                    <div
+                                        className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                                    >
+                                        Iniciar Sesión
+                                    </div>
                                 </NavLink>
                             </div>
                         </div>

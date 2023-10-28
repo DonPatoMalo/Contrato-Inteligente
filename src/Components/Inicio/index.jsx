@@ -31,12 +31,11 @@ function Inicio() {
                         </p>
                         <div className="mt-10 flex items-center justify-center gap-x-6">
                             <NavLink to="/Contrato-Inteligente/login">
-                                <a
-                                    href="#"
+                                <div
                                     className="rounded-md bg-Rojo px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                                 >
                                     Iniciar ahora
-                                </a>
+                                </div>
                             </NavLink>
                             <a href="#valores" className="text-sm font-semibold leading-6 text-gray-900">
                                 Descubre más <span aria-hidden="true">→</span>

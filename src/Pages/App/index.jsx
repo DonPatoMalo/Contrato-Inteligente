@@ -1,27 +1,23 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import { useLocalStorage } from 'react-use'
+import { AuthProvider } from '../../Context/auth'
 import Home from '../Home'
 import Login from '../Login'
 import Contrato from '../Contrato'
 import NotFound from '../NotFound'
-import RutasProtegidas from '../../Utils/RutasProtegidas'
 import './index.css'
 
 
 function App() {
-
-  const [user, setUser] = useLocalStorage('user')
-
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path='/Contrato-Inteligente' element={<Home />} />
-        <Route path='/Contrato-Inteligente/login' element={<Login />} />
-        <Route element={<RutasProtegidas Activar={user} redireccion='/Contrato-Inteligente/login'/>}>
+      <AuthProvider>
+        <Routes>
+          <Route path='/Contrato-Inteligente' element={<Home />} />
+          <Route path='/Contrato-Inteligente/login' element={<Login />} />
           <Route path="/Contrato-Inteligente/contrato" element={<Contrato />} />
-        </Route>
-        <Route path='/Contrato-Inteligente/*' element={<NotFound />} />
-      </Routes>
+          <Route path='/Contrato-Inteligente/*' element={<NotFound />} />
+        </Routes>
+      </AuthProvider>
     </BrowserRouter>
   )
 }
