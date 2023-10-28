@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import { enviarAutenticacion } from "../Utils/Autenticacion"
 import { useNavigate } from "react-router-dom"
 
-const AuthContext = React.createContext();
+const AuthContext = React.createContext()
 
 function AuthProvider({ children }) {
       const navigate = useNavigate()
@@ -33,7 +33,6 @@ function AuthProvider({ children }) {
             } catch (error) {
                   console.error("Error al cerrar sesión:", error)                  
             }
-            
       }
 
       const auth = { rut, claveUnica, login, logout, estadoLogin }

@@ -1,5 +1,6 @@
 import React from "react"
 import LogoContrato from "../../assets/img/logoContrato.png"
+import CarImage from "../../assets/img/CarImage.png"
 import { useAuth } from "../../Context/auth"
 import Login from "../SignIn"
 
@@ -9,7 +10,7 @@ function Contratos() {
       if (!auth.estadoLogin) {
             return <Login />
       }
-      
+
       const atributos = {
             crea: "Crear",
             firmar: "Firmar",
@@ -37,20 +38,26 @@ function Contratos() {
       }
 
       return (
-            <main className="flex justify-center items-center w-full h-screen">
-                  <section className="m-5 p-5">
-                        <div className="flex justify-center items-center">
-                              <img src={LogoContrato} alt="Logo de contrato" className="w-1/3" />
-                        </div>
-                        <div className="flex justify-center items-center">
-                              <h1 className="font-bold text-gradient text-4xl">
-                                    Compraventa de Vehículos
-                              </h1>
-                        </div>
-                        <ul className="flex justify-center items-center gap-8 flex-wrap mt-10 ">
+            <main className="flex justify-center items-center w-full h-full lg:h-screen mt-[90px] lg:mt-0">
+                  <section className="m-5 p-5 flex flex-col justify-center items-center">
+                  <img src={LogoContrato} alt="Logo de contrato" className="w-[12rem]" />
+                  <h1 className="text-center font-bold text-gradient text-4xl">Compraventa de Vehículos</h1>
+                        <article className="flex justify-center items-center lg:mt-10">
+                              <div className="w-1/2 flex flex-col justify-center items-center">
+                                    <h2 className="text-center font-bold text-4xl text-[#ED3A4F]">
+                                          ¡Bienvenido, Juan Pablo Hernandez!
+                                    </h2>
+                              </div>
+                              <div className="hidden lg:w-1/2 lg:flex lg:justify-center lg:items-center">
+                                    <img src={CarImage} alt="Ilustración Car" className="lg:w-[20rem]" />
+                              </div>
+                        </article>
+
+
+                        <ul className="flex justify-center items-center gap-8 flex-wrap mt-10 lg:mt-20">
                               {Object.keys(atributos).map((clave) => (
                                     <li
-                                          className="flex justify-between w-2/3 p-4 bg-[#ED3A4F] cursor-pointer 
+                                          className="w-[15rem] h-[5rem] flex justify-between items-center p-4 bg-[#ED3A4F] cursor-pointer 
                                                       text-[#FFFEFE] text-lg rounded-lg hover:bg-red-300 
                                                       hover:transition"
                                           key={clave}
