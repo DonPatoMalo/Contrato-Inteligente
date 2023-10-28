@@ -52,14 +52,16 @@ function Navbar() {
                 </div>
                 <div className="hidden lg:flex lg:gap-x-12">
                     {navegacion.map((item) => (
-                        <a key={item.name} href={item.href} className="text-sm font-semibold leading-6 text-gray-900">
-                            {item.name}
+                        <a key={item.name} href={item.href} className="w-[5rem] h-[2rem] flex justify-center items-center rounded-xl hover:bg-Rojo group transition duration-300" >
+                            <div className="text-sm font-semibold leading-6 text-gray-900 group-hover:text-white group-hover:font-normal">
+                                {item.name}
+                            </div>
                         </a>
                     ))}
                 </div>
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-                    <NavLink to="/Contrato-Inteligente/login">
-                        <div className="text-sm font-semibold leading-6 text-gray-900">
+                    <NavLink to="/Contrato-Inteligente/login" className="w-[8rem] h-[2rem] flex justify-center items-center rounded-xl hover:bg-Rojo group transition duration-300">
+                        <div className="text-sm font-semibold leading-6 text-gray-900 group-hover:text-white group-hover:font-normal">
                             Iniciar Sesión <span aria-hidden="true">&rarr;</span>
                         </div>
                     </NavLink>

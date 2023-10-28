@@ -8,6 +8,7 @@ function AuthProvider({ children }) {
       const navigate = useNavigate()
       const [rut, setRut] = useState(null)
       const [claveUnica, setClaveUnica] = useState(null)
+      const [estadoLogin, setEstadoLogin] = useState(false)
 
       const login = async (user, password) => {
             try {
@@ -15,6 +16,7 @@ function AuthProvider({ children }) {
                   if(resultado){
                         setRut(user)
                         setClaveUnica(password)
+                        setEstadoLogin(true)
                         navigate("/Contrato-Inteligente/contrato")
                   }
                   
@@ -34,7 +36,7 @@ function AuthProvider({ children }) {
             
       }
 
-      const auth = { rut, claveUnica, login, logout  }
+      const auth = { rut, claveUnica, login, logout, estadoLogin }
 
       return (
             <AuthContext.Provider value={auth}>
