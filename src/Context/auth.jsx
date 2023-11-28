@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { enviarAutenticacion } from "../Utils/Autenticacion"
 import { useNavigate } from "react-router-dom"
 
@@ -9,17 +9,19 @@ function AuthProvider({ children }) {
       const [rut, setRut] = useState(null)
       const [claveUnica, setClaveUnica] = useState(null)
       const [estadoLogin, setEstadoLogin] = useState(false)
+      const [usuario, setUsuario] = useState(null)
+
 
       const login = async (user, password) => {
             try {
                   const resultado = await enviarAutenticacion(user, password)
-                  if(resultado){
+                  if (resultado) {
                         setRut(user)
                         setClaveUnica(password)
                         setEstadoLogin(true)
                         navigate("/Contrato-Inteligente/contrato")
                   }
-                  
+
             } catch (error) {
                   console.error("Error al iniciar sesión:", error)
             }
@@ -31,11 +33,26 @@ function AuthProvider({ children }) {
                   setClaveUnica(null)
                   navigate("/")
             } catch (error) {
-                  console.error("Error al cerrar sesión:", error)                  
+                  console.error("Error al cerrar sesión:", error)
             }
       }
 
-      const auth = { rut, claveUnica, login, logout, estadoLogin }
+      const getUser = () => {
+            try {
+                  useEffect(() => {
+                        const objeto = localStorage.getItem('user');
+
+                        if (objeto) {
+                              const objetoParseado = JSON.parse(objeto);
+                              setUsuario(objetoParseado);
+                        }
+                  }, [])
+            } catch (error) {
+                  console.error("Error al obtener usuario:", error)
+            }
+      }
+
+      const auth = { rut, claveUnica, login, logout, estadoLogin, usuario, getUser }
 
       return (
             <AuthContext.Provider value={auth}>

@@ -1,6 +1,6 @@
 const apiUrl = import.meta.env.VITE_API
 
-const enviarAutenticacion = async (rut, claveUnica) => {
+const getUser = async (token) => {
   try {
     const response = await fetch(apiUrl, {
       method: "POST",
@@ -32,4 +32,4 @@ const enviarAutenticacion = async (rut, claveUnica) => {
   }
 }
 
-export { enviarAutenticacion }
+export { getUser }

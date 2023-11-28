@@ -1,24 +1,20 @@
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import Logo from "../../assets/img/logo.png"
+import UserInformation from '../../Components/UserInformation'
+import { useAuth } from '../../Context/auth'
 
-const user = {
-  name: 'Tom Cook',
-  email: 'tom@example.com',
-  imageUrl:
-    'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-}
 const navigation = [
-  { name: 'Dashboard', href: '#', current: true },
+  { name: 'Dasboard', href: '#', current: true },
   { name: 'Inicio', href: '/Contrato-Inteligente/', current: false },
   { name: 'Crear', href: '#', current: false },
   { name: 'Firmar', href: '#', current: false },
   { name: 'Historial', href: '#', current: false },
 ]
 const userNavigation = [
-  { name: 'Your Profile', href: '#' },
-  { name: 'Settings', href: '#' },
-  { name: 'Sign out', href: '#' },
+  { name: 'Perfil', href: '#' },
+  { name: 'Configuración', href: '#' },
+  { name: 'Cerrar sesión', href: '#' },
 ]
 
 function classNames(...classes) {
@@ -26,10 +22,17 @@ function classNames(...classes) {
 }
 
 function Dashboard() {
+
+  const user = {
+    name: 'Tom Cook',
+    email: 'tom@example.com',
+    imageUrl: "usuario.imagen"
+  }
+
   return (
     <>
       <div className="min-h-full">
-        <Disclosure as="nav" className="bg-white">
+        <Disclosure as="nav" className="bg-white shadow-md">
           {({ open }) => (
             <>
               <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -178,14 +181,10 @@ function Dashboard() {
           )}
         </Disclosure>
 
-        <header className="bg-white shadow">
-          <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-            <h1 className="text-3xl font-bold tracking-tight text-gray-900">Dashboard</h1>
-          </div>
-
-        </header>
         <main>
-          <div className="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">{/* Your content */}</div>
+          <div className="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8 flex justify-center">
+            <UserInformation/>
+          </div>
         </main>
       </div>
     </>
