@@ -1,0 +1,174 @@
+[
+	{
+	    "inputs": [],
+	    "stateMutability": "nonpayable",
+	    "type": "constructor"
+	},
+	{
+	    "inputs": [
+		  {
+			"internalType": "string",
+			"name": "_descripcion",
+			"type": "string"
+		  },
+		  {
+			"internalType": "uint256",
+			"name": "_precio",
+			"type": "uint256"
+		  },
+		  {
+			"internalType": "uint256",
+			"name": "_numeroSecreto",
+			"type": "uint256"
+		  }
+	    ],
+	    "name": "inicializarContrato",
+	    "outputs": [],
+	    "stateMutability": "nonpayable",
+	    "type": "function"
+	},
+	{
+	    "inputs": [
+		  {
+			"internalType": "uint256",
+			"name": "_numeroSecreto",
+			"type": "uint256"
+		  }
+	    ],
+	    "name": "firmarContrato",
+	    "outputs": [],
+	    "stateMutability": "nonpayable",
+	    "type": "function"
+	},
+	{
+	    "inputs": [],
+	    "name": "verDetalleContrato",
+	    "outputs": [
+		  {
+			"internalType": "string",
+			"name": "",
+			"type": "string"
+		  },
+		  {
+			"internalType": "uint256",
+			"name": "",
+			"type": "uint256"
+		  }
+	    ],
+	    "stateMutability": "view",
+	    "type": "function"
+	},
+	{
+	    "inputs": [],
+	    "name": "comprador",
+	    "outputs": [
+		  {
+			"internalType": "address",
+			"name": "",
+			"type": "address"
+		  }
+	    ],
+	    "stateMutability": "view",
+	    "type": "function"
+	},
+	{
+	    "inputs": [],
+	    "name": "contratoFirmado",
+	    "outputs": [
+		  {
+			"internalType": "bool",
+			"name": "",
+			"type": "bool"
+		  }
+	    ],
+	    "stateMutability": "view",
+	    "type": "function"
+	},
+	{
+	    "inputs": [],
+	    "name": "descripcion",
+	    "outputs": [
+		  {
+			"internalType": "string",
+			"name": "",
+			"type": "string"
+		  }
+	    ],
+	    "stateMutability": "view",
+	    "type": "function"
+	},
+	{
+	    "inputs": [],
+	    "name": "numeroSecreto",
+	    "outputs": [
+		  {
+			"internalType": "uint256",
+			"name": "",
+			"type": "uint256"
+		  }
+	    ],
+	    "stateMutability": "view",
+	    "type": "function"
+	},
+	{
+	    "inputs": [],
+	    "name": "precio",
+	    "outputs": [
+		  "uint256"
+	    ],
+	    "stateMutability": "view",
+	    "type": "function"
+	},
+	{
+	    "inputs": [],
+	    "name": "vendedor",
+	    "outputs": [
+		  {
+			"internalType": "address",
+			"name": "",
+			"type": "address"
+		  }
+	    ],
+	    "stateMutability": "view",
+	    "type": "function"
+	},
+	{
+	    "anonymous": false,
+	    "inputs": [
+		  {
+			"indexed": true,
+			"internalType": "address",
+			"name": "vendedor",
+			"type": "address"
+		  },
+		  {
+			"indexed": false,
+			"internalType": "string",
+			"name": "descripcion",
+			"type": "string"
+		  },
+		  {
+			"indexed": false,
+			"internalType": "uint256",
+			"name": "precio",
+			"type": "uint256"
+		  }
+	    ],
+	    "name": "ContratoCreado",
+	    "type": "event"
+	},
+	{
+	    "anonymous": false,
+	    "inputs": [
+		  {
+			"indexed": true,
+			"internalType": "address",
+			"name": "comprador",
+			"type": "address"
+		  }
+	    ],
+	    "name": "ContratoFirmado",
+	    "type": "event"
+	}
+  ]
+  
