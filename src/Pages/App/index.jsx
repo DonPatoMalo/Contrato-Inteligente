@@ -6,6 +6,7 @@ import Login from '../Login'
 import Smart from '../../Components/CreateSmart'
 import Dashboard from '../Dashboard'
 import NotFound from '../NotFound'
+import Create from '../Create'
 import './index.css'
 
 
@@ -17,7 +18,7 @@ function App() {
           <Route path='/Contrato-Inteligente' element={<Home />} />
           <Route path='/Contrato-Inteligente/login' element={<Login />} />
           <Route path="/Contrato-Inteligente/contrato" element={<Dashboard />} />
-          <Route path='/Contrato-Inteligente/smart' element={<Smart />} />
+          <Route path='/Contrato-Inteligente/smart' element={<Create />} />
           <Route path='/Contrato-Inteligente/*' element={<NotFound />} />
         </Routes>
       </AuthProvider>

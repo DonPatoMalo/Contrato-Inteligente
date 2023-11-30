@@ -2,12 +2,11 @@ import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import Logo from "../../assets/img/logo.png"
 import UserInformation from '../../Components/UserInformation'
-import { useAuth } from '../../Context/auth'
 
 const navigation = [
   { name: 'Dasboard', href: '#', current: true },
   { name: 'Inicio', href: '/Contrato-Inteligente/', current: false },
-  { name: 'Crear', href: '#', current: false },
+  { name: 'Crear', href: '/Contrato-Inteligente/smart', current: false },
   { name: 'Firmar', href: '#', current: false },
   { name: 'Historial', href: '#', current: false },
 ]

@@ -11,9 +11,7 @@ const CompraVentaComponent = () => {
   const [numeroSecreto, setNumeroSecreto] = useState('');
 
   useEffect(() => {
-    // Función para inicializar MetaMask
     const initMetaMask = async () => {
-      // Comprobamos si MetaMask está instalado
       if (window.ethereum) {
         // Habilitamos MetaMask
         await window.ethereum.enable();
@@ -30,13 +28,12 @@ const CompraVentaComponent = () => {
           setAccount(accounts[0]);
         }
 
-        // Creamos la instancia del contrato
         const contratoAbi = [
           'function inicializarContrato(string _descripcion, uint _precio, uint _numeroSecreto) external',
           'function firmarContrato(uint _numeroSecreto) external',
           'function verDetalleContrato() external view returns (string, uint)',
         ];
-        const contratoAddress = '0x93D8e96A4d719e4a17Fb7832729ea483f08980fb'; // Reemplaza con la dirección real del contrato
+        const contratoAddress = '0x93D8e96A4d719e4a17Fb7832729ea483f08980fb';
         const contratoInstance = new ethers.Contract(
           contratoAddress,
           contratoAbi,
@@ -49,7 +46,7 @@ const CompraVentaComponent = () => {
     };
 
     initMetaMask();
-  }, []); // Solo se ejecuta una vez al montar el componente
+  }, []);
 
   const handleInicializarContrato = async () => {
     if (contrato && descripcion && precio && numeroSecreto) {
