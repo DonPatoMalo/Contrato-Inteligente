@@ -16,7 +16,8 @@ export default {
         ...theme('colors'), 
         'Negro': '#000000',
         'Blanco': '#ffffff',
-        'Rojo': '#B2130D'
+        'Rojo': '#B2130D',
+        'Rojo-claro': '#ED3A4F'
       }),
 
       borderColor: {

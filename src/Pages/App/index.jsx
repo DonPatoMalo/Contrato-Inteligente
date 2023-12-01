@@ -2,11 +2,10 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { AuthProvider } from '../../Context/auth'
 import Home from '../Home'
 import Login from '../Login'
-// import Contrato from '../Contrato'
-import Smart from '../../Components/CreateSmart'
-import Dashboard from '../Dashboard'
+import Instrucciones from '../Instrucciones'
+import CreacionContrato from '../CreacionContrato'
+import FirmarContrato from '../FirmarContrato'
 import NotFound from '../NotFound'
-import Create from '../Create'
 import './index.css'
 
 
@@ -17,8 +16,9 @@ function App() {
         <Routes>
           <Route path='/Contrato-Inteligente' element={<Home />} />
           <Route path='/Contrato-Inteligente/login' element={<Login />} />
-          <Route path="/Contrato-Inteligente/contrato" element={<Dashboard />} />
-          <Route path='/Contrato-Inteligente/smart' element={<Create />} />
+          <Route path="/Contrato-Inteligente/contrato" element={<Instrucciones />} />
+          <Route path='/Contrato-Inteligente/create' element={<CreacionContrato />} />
+          <Route path='/Contrato-Inteligente/firmar' element={<FirmarContrato />} />
           <Route path='/Contrato-Inteligente/*' element={<NotFound />} />
         </Routes>
       </AuthProvider>
