@@ -5,6 +5,7 @@ import Login from '../Login'
 import Instrucciones from '../Instrucciones'
 import CreacionContrato from '../CreacionContrato'
 import FirmarContrato from '../FirmarContrato'
+import InformacionContrato  from '../InformacionContrato'
 import NotFound from '../NotFound'
 import './index.css'
 
@@ -19,6 +20,7 @@ function App() {
           <Route path="/Contrato-Inteligente/contrato" element={<Instrucciones />} />
           <Route path='/Contrato-Inteligente/create' element={<CreacionContrato />} />
           <Route path='/Contrato-Inteligente/firmar' element={<FirmarContrato />} />
+          <Route path='/Contrato-Inteligente/historial' element={<InformacionContrato />} />
           <Route path='/Contrato-Inteligente/*' element={<NotFound />} />
         </Routes>
       </AuthProvider>
