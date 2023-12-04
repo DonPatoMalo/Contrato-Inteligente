@@ -136,13 +136,13 @@ const FirmarContrato = () => {
                                                 </div>
                                           </div>
 
-                                          <article className='lg:flex lg:gap-10'>
+                                          <article className='lg:flex lg: flex-col lg:gap-10'>
                                                 <div className='mt-5 flex flex-col justify-center items-center'>
 
 
                                                       <div className='flex flex-col justify-center items-center my-5 gap-5'>
                                                             <p className='text-xl font-bold lg:text-2xl'>Terminos y condiciones</p>
-                                                            <div className='bg-white w-64 h-auto border border-Rojo rounded-lg p-5'>
+                                                            <div className='bg-white lg:w-[40rem] w-[20rem] h-auto border border-Rojo rounded-lg p-5'>
                                                                   <p className='lg:text-lg'>{detalleContrato.descripcion}</p>
                                                             </div>
 

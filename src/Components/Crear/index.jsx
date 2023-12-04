@@ -119,14 +119,14 @@ const CompraVentaComponenteCrearContrato = () => {
                 </div>
               </div>
 
-              <article className='p-5 m-2'>
+              <article className='p-5 m-2 w-full'>
                 <div className='flex flex-col justify-center items-center gap-5'>
-                  <label>
+                  <label className='flex flex-col justify-center'>
                     <div className='flex flex-col justify-center items-center mb-5'>
                       <h3 className='text-xl lg:text-2xl'>Terminos y Condiciones</h3>
                     </div>
                     <textarea
-                      className='w-[20rem] border-solid border-Rojo border-[.1rem] rounded-lg p-4 resize-y'
+                      className='lg:w-[40rem] w-[20rem] border-solid border-Rojo border-[.1rem] rounded-lg p-4 resize-y'
                       placeholder='Escribir terminos del contrato'
                       type="text"
                       value={descripcion}
@@ -134,7 +134,7 @@ const CompraVentaComponenteCrearContrato = () => {
                     />
                   </label>
                   <article className='lg:flex lg:gap-8 lg:my-5'>
-                    <label className='flex flex-col justify-center items-center'>
+                    <label className='flex flex-col justify-center items-center mt-5'>
                       <h3 className='text-xl lg:text-2xl'>Precio (USD)</h3>
                       <input
                         className='border-Rojo border-[.1rem] rounded-lg p-2 mt-5'
@@ -142,7 +142,7 @@ const CompraVentaComponenteCrearContrato = () => {
                         placeholder='Ingresa precio'
                         value={precio} onChange={(e) => setPrecio(e.target.value)} />
                     </label>
-                    <label className='flex flex-col justify-center items-center'>
+                    <label className='flex flex-col justify-center items-center mt-5'>
                       <div>
                         <h3 className='text-xl lg:text-2xl'>Número Secreto</h3>
                       </div>

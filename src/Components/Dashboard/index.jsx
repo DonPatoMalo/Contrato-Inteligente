@@ -10,7 +10,7 @@ const navigation = [
   { name: 'Inicio', to: '/Contrato-Inteligente/', current: false },
   { name: 'Crear', to: '/Contrato-Inteligente/create', current: false },
   { name: 'Firmar', to: '/Contrato-Inteligente/firmar', current: false },
-  { name: 'Historial', to: '/Contrato-Inteligente/historial', current: false },
+  { name: 'Detalles', to: '/Contrato-Inteligente/historial', current: false },
 ];
 
 const userNavigation = [
