@@ -3,6 +3,7 @@ import { ethers } from 'ethers'
 import Metamask from '../../assets/img/metamask.png'
 import LogoContrato from '../../assets/img/logoContrato.png'
 import ImageConection from '../../assets/img/conection.png'
+import QRCode from 'react-qr-code'
 
 const CompraVentaComponenteCrearContrato = () => {
   const [provider, setProvider] = useState(null)
@@ -13,6 +14,10 @@ const CompraVentaComponenteCrearContrato = () => {
   const [precio, setPrecio] = useState('')
   const [numeroSecreto, setNumeroSecreto] = useState('')
   const [connectedToMetaMask, setConnectedToMetaMask] = useState(false)
+  const [generarQR, setGenerarQR] = useState(false)
+
+  const UrlComprador = 'http://benjaesteban.github.io/Contrato-Inteligente/'
+
 
   const conectarMetamask = async () => {
     if (window.ethereum) {
@@ -59,6 +64,10 @@ const CompraVentaComponenteCrearContrato = () => {
         console.error('Error al inicializar el contrato:', error.message)
       }
     }
+  }
+
+  const handleGenerarQR = () => {
+    setGenerarQR(true)
   }
 
   return (
@@ -164,9 +173,20 @@ const CompraVentaComponenteCrearContrato = () => {
                     onClick={handleInicializarContrato}>Inicializar Contrato
                   </button>
                 </div>
-
-
+                <div className='h-auto flex justify-center items-center mt-3'>
+                  <div style={{ display: generarQR ? 'block' : 'none' }}>
+                    <QRCode value={UrlComprador} />
+                  </div>
+                  <div className='flex justify-center items-center'>
+                    <button
+                      className='p-3 bg-Rojo-claro rounded-full hover:shadow-lg my-5 text-sm text-white lg:text-lg lg:p-3 hover:bg-red-500 transition'
+                      onClick={handleGenerarQR} style={{ display: generarQR ? 'none' : 'block' }}>
+                      Generar código QR
+                    </button>
+                  </div>
+                </div>
               </article>
+
             </section>
           </>
         )}

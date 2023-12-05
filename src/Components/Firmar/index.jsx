@@ -15,6 +15,7 @@ const FirmarContrato = () => {
       const [detalleContrato, setDetalleContrato] = useState({ descripcion: '', precio: 0 })
 
 
+
       const conectarMetamask = async () => {
             if (window.ethereum) {
                   await window.ethereum.request({ method: 'eth_requestAccounts' })
@@ -169,7 +170,6 @@ const FirmarContrato = () => {
                                                             onClick={handleFirmarContrato}>Firmar Contrato</button>
                                                 </div>
                                           </article>
-
                                     </section>
                               </>
                         )}
