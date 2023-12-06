@@ -1,5 +1,5 @@
 import React from "react"
-import LogoContrato from "../../assets/img/LogoContrato.png"
+import { LogoContrato } from "../../assets/img/LogoContrato.png"
 import { NavLink } from "react-router-dom"
 
 function Inicio() {
