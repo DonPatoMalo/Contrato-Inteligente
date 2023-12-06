@@ -1,4 +1,4 @@
-const apiUrl = 'https://contrato-inteligente-backend-production.up.railway.app/api/login/signin'
+const apiUrl = "https://contrato-inteligente-backend-production.up.railway.app/api/login/signin"
 
 const enviarAutenticacion = async (rut, claveUnica) => {
   try {
